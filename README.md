@@ -5,11 +5,11 @@ Conway's cellular automata.
 
 Notes:
 
-- LINUX COMPILE: gcc -o <compiled_code_name> <code_name>.cpp -lGL -lglut -lGLU -lpthread -lpthread -lstdc++
+- Linux Compile: gcc -o <compiled_code_name> <code_name>.cpp -lGL -lglut -lGLU -lpthread -lpthread -lstdc++
 
-- If compiling the program on Linux include <GL/glut.h> as the library
+- If compiling the program on Linux include "GL/glut.h" as the library
 
-- If compiling the program on Mac include <GLUT/glut.h> as the library
+- If compiling the program on Mac include "GLUT/glut.h" as the library
 
 - Once the program has been ran, press any keyboard to proceess the next generation on the grid.
 
@@ -18,7 +18,7 @@ Notes:
 
 Author: 
 
-- Daniel Inoa (http://www.danielinoa.com).
+- Daniel Inoa - http://www.danielinoa.com
 
 
 Extra Notes:
