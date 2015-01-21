@@ -12,8 +12,8 @@
 #include <stdlib.h>     /* srand, rand */
 #include <sys/time.h> //timing library
 #include <OpenGL/OpenGL.h>
-// #include <GLUT/glut.h> // Used in Xcode FOR MAC
-#include <GL/glut.h> //GLUT library - Used in URI Clusters FOR LINUX
+#include <GLUT/glut.h> // Used in Xcode FOR MAC
+// #include <GL/glut.h> //GLUT library - Used in URI Clusters FOR LINUX
 
 
 #define X_WINDOW  1000
@@ -152,7 +152,7 @@ int main(int argc, char *argv[]){
     glutInit(&argc, argv);                 // Initialize GLUT
     glutInitWindowSize(X_WINDOW, Y_WINDOW);   // Set the window's initial width & height
     glutInitWindowPosition(400, 50); // Position the window's initial top-left corner
-    glutCreateWindow("OpenGL Test"); // Create a window with the given title
+    glutCreateWindow("Game Of Life with OpenGL"); // Create a window with the given title
     
         start();
     
