@@ -119,7 +119,7 @@ void start(){
     for (int x = 0; x < X_WINDOW; x++){
         for (int y = 0; y < Y_WINDOW; y++){
             
-            int random_int = rand() % 2; // generate secret number between 0 and 1
+            int random_int = rand() % 2; // generate random number between 0 and 1
             
             if(random_int == 1){
                 image[x][y][0] = image[x][y][1] = image[x][y][2] = BLACK;
