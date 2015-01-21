@@ -15,8 +15,8 @@
 #include <GLUT/glut.h> // Used in Xcode FOR MAC
 //#include <GL/glut.h> //GLUT library - Used in URI Clusters FOR LINUX
 
-#define X_WINDOW 500
-#define Y_WINDOW 500
+#define X_WINDOW 1000
+#define Y_WINDOW 1000
 
 #define BLACK 0
 #define WHITE 255
