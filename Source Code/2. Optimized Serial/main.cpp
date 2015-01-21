@@ -12,23 +12,22 @@
 #include <stdlib.h>     /* srand, rand */
 #include <sys/time.h> //timing library
 #include <OpenGL/OpenGL.h>
-// #include <GLUT/glut.h> // Used in Xcode FOR MAC
-#include <GL/glut.h> //GLUT library - Used in URI Clusters FOR LINUX
+#include <GLUT/glut.h> // Used in Xcode FOR MAC
+//#include <GL/glut.h> //GLUT library - Used in URI Clusters FOR LINUX
 
-#define X_WINDOW 1000
-#define Y_WINDOW 1000
+#define X_WINDOW 500
+#define Y_WINDOW 500
 
 #define BLACK 0
 #define WHITE 255
 
 unsigned char image[X_WINDOW][Y_WINDOW][3];
 unsigned char cells[X_WINDOW][Y_WINDOW];
-unsigned char backup_cells[X_WINDOW][Y_WINDOW]; // backup array to avoid race condition.
 bool paused = true;
 
 void process(){
 
-    paused = (paused)?false:true;
+    paused = !paused;
     
 //    while (!paused) {
     
@@ -77,7 +76,7 @@ void process(){
     
         glDrawPixels(X_WINDOW, Y_WINDOW, GL_RGB, GL_UNSIGNED_BYTE, image);
         glFlush();
-        
+    
 //    }
     
 }
@@ -142,13 +141,13 @@ int main(int argc, char *argv[]){
     glutInit(&argc, argv);                 // Initialize GLUT
     glutInitWindowSize(X_WINDOW, Y_WINDOW);   // Set the window's initial width & height
     glutInitWindowPosition(400, 50); // Position the window's initial top-left corner
-    glutCreateWindow("OpenGL Test"); // Create a window with the given title
+    glutCreateWindow("Game Of Life with OpenGL"); // Create a window with the given title
     
     start();
     
     glutDisplayFunc(display); // Register display callback handler for window re-paint
     glutKeyboardFunc(keypressed);
-    glutMainLoop();           // Enter the infinitely event-processing loop
+    glutMainLoop();           // Enter the indefinite event-processing loop
     
     
     return 0;
