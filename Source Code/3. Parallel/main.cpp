@@ -181,7 +181,7 @@ void start(){
     for (int x = 0; x < X_WINDOW; x++){
         for (int y = 0; y < Y_WINDOW; y++){
             
-            int random_int = rand() % 2; // generate secret number between 0 and 1
+            int random_int = rand() % 2; // generate random number between 0 and 1
             
             if(random_int == 1){
                 image[x][y][0] = image[x][y][1] = image[x][y][2] = BLACK;
@@ -203,7 +203,7 @@ int main(int argc, char *argv[]){
     glutInit(&argc, argv);                 // Initialize GLUT
     glutInitWindowSize(X_WINDOW, Y_WINDOW);   // Set the window's initial width & height
     glutInitWindowPosition(400, 50); // Position the window's initial top-left corner
-    glutCreateWindow("OpenGL Test"); // Create a window with the given title
+    glutCreateWindow("Game Of Life with OpenGL"); // Create a window with the given title
     
         start();
     
